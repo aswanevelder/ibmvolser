@@ -37,7 +37,7 @@ Environment variables:
 - VOLSER_LOCATION will be used as the directory. If this is not set the default will be ./reports.
 - VOLSER_TIMEZONE will be used as the timezone to determine the directory layout. The default is en-ZA which translates to yyyy.MM.dd 
 
-```run
+```bash
 node index.js
 ```
 
