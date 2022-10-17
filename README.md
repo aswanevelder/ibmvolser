@@ -10,17 +10,21 @@ Each file is opened and if a search term entered searched and then displayed as 
 The library information is stored as JSON with the following folder layout:
 
 - daily
-   - file1
-   - file2
+   - 2022.10.15
+      - file1
+      - file2
 - weekly
-   - file1
-   - file2
+   - 2022.10.15
+      - file1
+      - file2
 - monthly
-   - file1
-   - file2
+   - 2022.10.15
+      - file1
+      - file2
 - yearly
-   - file1
-   - file2
+   - 2022.10.15
+      - file1
+      - file2
 
 ## Installation
 
@@ -28,7 +32,10 @@ Install NodeJS. https://nodejs.org/en/
 
 ## Usage
 
-Environment variable VOLSER_LOCATION will be used as the directory. If this is not set the default will be ./reports.
+Environment variables: 
+
+- VOLSER_LOCATION will be used as the directory. If this is not set the default will be ./reports.
+- VOLSER_TIMEZONE will be used as the timezone to determine the directory layout. The default is en-ZA which translates to yyyy.MM.dd 
 
 ```run
 node index.js
