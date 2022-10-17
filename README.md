@@ -28,6 +28,8 @@ Install NodeJS. https://nodejs.org/en/
 
 ## Usage
 
+Environment variable VOLSER_LOCATION will be used as the directory. If this is not set the default will be ./reports.
+
 ```run
 node index.js
 ```
