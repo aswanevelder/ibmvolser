@@ -1,6 +1,6 @@
 # IBM VOLSER SEARCH
 
-A simple NodeJS server for searching backup volume library in IBMs VOLSER TAPE LIBRARY.
+A simple NodeJS server for searching the meta data for an IBM VOLSER TAPE LIBRARY.
 
 ![Screenshot](https://s3.eu-central-1.amazonaws.com/com.trublo.assets/search-example.png)
 
