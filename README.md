@@ -4,8 +4,8 @@ A simple NodeJS server for searching the meta data for an IBM VOLSER TAPE LIBRAR
 
 ![Screenshot](https://s3.eu-central-1.amazonaws.com/com.trublo.assets/search-example.png)
 
-The application will list the library of backups display dsn, volumes, job names and job steps etc.
-Each file is opened and if a search term entered searched and then displayed as HTML format.
+The application will list the library of backups displaying dsn, volumes, job names and job steps etc.
+Each file is opened in the chosen date directory and if a search term entered searched and then displayed as HTML.
 
 The library information is stored as JSON with the following folder layout:
 
