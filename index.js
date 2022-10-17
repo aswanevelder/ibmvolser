@@ -54,7 +54,13 @@ const search = function(req, table, callback) {
 
         date = date.replace(/-/g, ".");
         date = date.replace(/\//g, ".");
-        const dir = `./reports/${interval}/${date}`;
+
+        //If no environment variable is set then use the local default
+        let directory = process.env.VOLSER_LOCATION;
+        if (!directory)
+            directory = `./reports`;
+
+        const dir = `${directory}/${interval}/${date}`;
 
         if (fs.existsSync(dir)) {
             fs.readdir(dir, (err, files) => {
@@ -73,19 +79,26 @@ const search = function(req, table, callback) {
                 var timer = setInterval(() => {
                     if (filesSearched == files.length) {
                         clearInterval(timer);
-                        callback(records, date, search);
+                        if (records)
+                            callback(records, date, search);
+                        else
+                            callback(noRecords(table, date, search), date, search);
                     }
                 }, 1000);
             });
         }
         else {
-            let error = "";
-            error = String(table)
-                .replace("[FILERECORD]", `<td colspan=8>Directory not found: ${date}</td>`)
-                .replace("[RECORDS]", "<tr><td colspan=8>No records found</td></tr>");
-            callback(error, date, search);
+            callback(noRecords(table, date, search), date, search);
         }
     }
+}
+
+const noRecords = function(table, date, search) {
+    let error = "";
+    error = String(table)
+        .replace("[FILERECORD]", `<td colspan=8>Search term '${search}' at location ${date} returned no results.</td>`)
+        .replace("[RECORDS]", "<tr><td colspan=8>No records found</td></tr>");
+    return error;
 }
 
 const findJob = function(table, file, search, callback) {
