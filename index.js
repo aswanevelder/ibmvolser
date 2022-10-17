@@ -80,7 +80,7 @@ const search = function(req, table, callback) {
                 }
             
                 files.forEach(file => {
-                    findJob(table, `${dir}/${file}`, search, (data) => {
+                    searchFile(table, `${dir}/${file}`, search, (data) => {
                         if (data)
                         records += data;
                     });
@@ -116,7 +116,7 @@ const noRecords = function(table, date, search) {
     return error;
 }
 
-const findJob = function(table, file, search, callback) {
+const searchFile = function(table, file, search, callback) {
     fs.readFile(file, (err, data) => {
         if (search) {
             if (String(data).toLowerCase().indexOf(search.toLowerCase()) > -1) {
