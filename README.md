@@ -2,6 +2,8 @@
 
 A simple NodeJS server for searching backup volume library in IBMs VOLSER TAPE LIBRARY.
 
+![Screenshot](https://s3.eu-central-1.amazonaws.com/com.trublo.assets/search-example.png)
+
 The application will list the library of backups display dsn, volumes, job names and job steps etc.
 Each file is opened and if a search term entered searched and then displayed as HTML format.
 
