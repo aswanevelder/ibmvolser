@@ -7,16 +7,16 @@ Each file is opened and if a search term entered searched and then displayed as 
 
 The library information is stored as JSON with the following folder layout:
 
-daily
+- daily
  - file1
  - file2
-weekly
+- weekly
  - file1
  - file2
-monthly
+- monthly
  - file1
  - file2
-yearly
+- yearly
  - file1
  - file2
 
