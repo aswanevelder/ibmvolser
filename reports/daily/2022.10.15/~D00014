@@ -1,0 +1,132 @@
+{
+    "file_name" : "~D00000",
+    "volser" : "D00000",
+    "label_type" : "S",
+    "encryption" : "off",
+    "vol1" : "VOL1D00000 ABCDE",
+    "file_size" : 41968904060,
+    "access_time" : 1665723862,
+    "modification_time" : 1665723862,
+    "data_sets" : [
+         {
+             "dsn" : "DSN1",
+             "creation_date" : "2022/286",
+             "expiration_date" : "2022/293",
+             "recfm" : "U",
+             "block_length" : 32760,
+             "lrecl" : 0,
+             "job_name" : "JOB1",
+             "job_step" : "STEP001",
+             "hdr1" : "HDR1Y.SIPD11.1 OS/VS 370       ",
+             "hdr2" : "HDR2600000000JOB1/STEP001        0045A8                                 "
+         },
+         {
+             "dsn" : "DSN1",
+             "creation_date" : "2022/286",
+             "expiration_date" : "2022/293",
+             "recfm" : "U",
+             "block_length" : 32760,
+             "lrecl" : 0,
+             "job_name" : "JOB1",
+             "job_step" : "STEP001",
+             "hdr1" : "HDR1Y.PDDG38.2 OS/VS 370       ",
+             "hdr2" : "HDR2600000000JOB1/STEP001        0045A8                                 "
+         },
+         {
+             "dsn" : "DSN1",
+             "creation_date" : "2022/286",
+             "expiration_date" : "2022/293",
+             "recfm" : "U",
+             "block_length" : 32760,
+             "lrecl" : 0,
+             "job_name" : "JOB1",
+             "job_step" : "STEP001",
+             "hdr1" : "HDR1Y.PDDG23.3 OS/VS 370       ",
+             "hdr2" : "HDR2600000000JOB1/STEP001        0045A8                                 "
+         },
+         {
+             "dsn" : "DSN1",
+             "creation_date" : "2022/286",
+             "expiration_date" : "2022/293",
+             "recfm" : "U",
+             "block_length" : 32760,
+             "lrecl" : 0,
+             "job_name" : "JOB1",
+             "job_step" : "STEP001",
+             "hdr1" : "HDR1Y.PDDG24.4 OS/VS 370       ",
+             "hdr2" : "HDR2600000000JOB1/STEP001        0045A8                                 "
+         },
+         {
+             "dsn" : "DSN1",
+             "creation_date" : "2022/286",
+             "expiration_date" : "2022/293",
+             "recfm" : "U",
+             "block_length" : 32760,
+             "lrecl" : 0,
+             "job_name" : "JOB1",
+             "job_step" : "STEP001",
+             "hdr1" : "HDR1Y.PDDG25.5 OS/VS 370       ",
+             "hdr2" : "HDR2600000000JOB1/STEP001        0045A8                                 "
+         },
+         {
+             "dsn" : "DSN1",
+             "creation_date" : "2022/286",
+             "expiration_date" : "2022/293",
+             "recfm" : "U",
+             "block_length" : 32760,
+             "lrecl" : 0,
+             "job_name" : "JOB1",
+             "job_step" : "STEP001",
+             "hdr1" : "HDR1Y.PDDG26.6 OS/VS 370       ",
+             "hdr2" : "HDR2600000000JOB1/STEP001        0045A8                                 "
+         },
+         {
+             "dsn" : "DSN1",
+             "creation_date" : "2022/286",
+             "expiration_date" : "2022/293",
+             "recfm" : "U",
+             "block_length" : 32760,
+             "lrecl" : 0,
+             "job_name" : "JOB1",
+             "job_step" : "STEP001",
+             "hdr1" : "HDR1Y.PDDG27.7 OS/VS 370       ",
+             "hdr2" : "HDR2600000000JOB1/STEP001        0045A8                                 "
+         },
+         {
+             "dsn" : "DSN1",
+             "creation_date" : "2022/286",
+             "expiration_date" : "2022/293",
+             "recfm" : "U",
+             "block_length" : 32760,
+             "lrecl" : 0,
+             "job_name" : "JOB1",
+             "job_step" : "STEP001",
+             "hdr1" : "HDR1Y.SURS06.8 OS/VS 370       ",
+             "hdr2" : "HDR2600000000JOB1/STEP001        0045A8                                 "
+         },
+         {
+             "dsn" : "DSN1",
+             "creation_date" : "2022/286",
+             "expiration_date" : "2022/293",
+             "recfm" : "U",
+             "block_length" : 32760,
+             "lrecl" : 0,
+             "job_name" : "JOB1",
+             "job_step" : "STEP001",
+             "hdr1" : "HDR1Y.S22DB0.9 OS/VS 370       ",
+             "hdr2" : "HDR2600000000JOB1/STEP001        0045A8                                 "
+         },
+         {
+             "dsn" : "DSN1",
+             "creation_date" : "2022/286",
+             "expiration_date" : "2022/293",
+             "recfm" : "U",
+             "block_length" : 32760,
+             "lrecl" : 0,
+             "job_name" : "JOB1",
+             "job_step" : "STEP001",
+             "hdr1" : "HDR1Y.S22DB1.10 OS/VS 370       ",
+             "hdr2" : "HDR2600000000JOB1/STEP001        0045A8                                 "
+         }
+      ]
+}

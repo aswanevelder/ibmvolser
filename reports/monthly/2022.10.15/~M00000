@@ -1,0 +1,24 @@
+{
+    "file_name" : "~M00000",
+    "volser" : "M00000",
+    "label_type" : "S",
+    "encryption" : "off",
+    "vol1" : "VOL1M00000                                               TCSBT                 ~",
+    "file_size" : 416,
+    "access_time" : 631144800,
+    "modification_time" : 631144800,
+    "data_sets" : [
+         {
+             "dsn" : "00000000000000000",
+             "creation_date" : "",
+             "expiration_date" : "",
+             "recfm" : " ",
+             "block_length" : 0,
+             "lrecl" : 0,
+             "job_name" : "",
+             "job_step" : "",
+             "hdr1" : "HDR10000000000000000000000000000000000000000000000000000000000000000000000000000",
+             "hdr2" : ""
+         }
+      ]
+}
