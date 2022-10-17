@@ -119,7 +119,7 @@ const noRecords = function(table, date, search) {
 const findJob = function(table, file, search, callback) {
     fs.readFile(file, (err, data) => {
         if (search) {
-            if (data.indexOf(search) > -1) {
+            if (String(data).toLowerCase().indexOf(search.toLowerCase()) > -1) {
                 let html = createRecord(table, JSON.parse(data));
                 callback(html);
             }
