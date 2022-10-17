@@ -41,7 +41,16 @@ const search = function(req, table, callback) {
     if (qs) {
         let date = qs.date;
         const search = qs.search;
-        const interval = qs.interval;
+        let interval = qs.interval;
+
+        //Default interval to daily if not found in querystring
+        if (!interval)
+            interval = "daily";
+
+        //Get the environment variable for timezone else default to en-ZA
+        let timezone = process.env.VOLSER_TIMEZONE;
+        if (!timezone)
+            timezone = "en-ZA";
 
         if (!date) {
             const dt = new Date();
@@ -52,6 +61,7 @@ const search = function(req, table, callback) {
             });
         }
 
+        //The folder structure uses "." replace all "-" or "/" with "."
         date = date.replace(/-/g, ".");
         date = date.replace(/\//g, ".");
 
@@ -60,6 +70,7 @@ const search = function(req, table, callback) {
         if (!directory)
             directory = `./reports`;
 
+        //Interval passed by querystring can be daily, weekly, monthly, yearly
         const dir = `${directory}/${interval}/${date}`;
 
         if (fs.existsSync(dir)) {
@@ -95,6 +106,10 @@ const search = function(req, table, callback) {
 
 const noRecords = function(table, date, search) {
     let error = "";
+
+    if (!search)
+        search = "";
+
     error = String(table)
         .replace("[FILERECORD]", `<td colspan=8>Search term '${search}' at location ${date} returned no results.</td>`)
         .replace("[RECORDS]", "<tr><td colspan=8>No records found</td></tr>");
@@ -137,6 +152,7 @@ const createRecord = function(table, model) {
     return html.replace("[RECORDS]", records);
 }
 
+//Dates are stored as julian dates yyy/ddd
 const convertJulianDay = function (jd) {
     const array = jd.split("/");
     if (array.length == 2) {
