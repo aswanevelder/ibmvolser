@@ -80,10 +80,14 @@ const search = function(req, table, callback) {
                 }
             
                 files.forEach(file => {
-                    searchFile(table, `${dir}/${file}`, search, (data) => {
-                        if (data)
-                        records += data;
-                    });
+                    if (!file.startsWith("~")) {
+                        searchFile(table, `${dir}/${file}`, search, (data) => {
+                            if (data)
+                            records += data;
+                        });
+                    }
+                    else
+                        filesSearched++; //still need to increment to end response.
                 });
 
                 //Search the files are async so we need to check if it is done in a timer.
