@@ -10,20 +10,17 @@ const requestListener = async (req, res) => {
     res.setHeader("Content-Type", "text/html");
     res.writeHead(200);
 
-    const params = qs.getQueryParameters(req);
-
     let directory = process.env.VOLSER_LOCATION;
     if (!directory)
         directory = `./reports`;
 
     let html = String(await fm.getHtmlLayout());
-    html = hg.getHtmlInterval(html, params.interval);
-    const menu = await hg.getMenu(html, `${directory}/${params.interval}`, params.date);
+    html = hg.getHtmlInterval(html, req);
+    const menu = await hg.getMenu(html, req);
     html = menu.html;
-    console.log(menu.date);
     html = await fm.search(html, req, menu.date);
-    html = await hg.repFile(html, `${directory}/${params.interval}/${menu.date}`, params.showrep);
-    html = hg.search(html, params);
+    html = await hg.repFile(html, req, menu.date);
+    html = hg.search(html, req);
     
     res.end(html);
 };
