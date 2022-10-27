@@ -39,7 +39,7 @@ Environment variables:
 - VOLSER_TOKEN is a required hash generated with token.js. Please see section Token.
 - VOLSER_TOKEN_EXPIRE_MIN is minutes till token expire, default is 10 minutes.
 ```bash
-node index.js
+node index
 ```
 
 ## Generate Token
@@ -48,7 +48,7 @@ You will require to generate and store the token as an envrironment variable for
 
 Run the following command with your chosen username and password.
 ```bash
-node token.js username password
+node token username password
 ```
 Set Environment Variable with the output hash example of username and password below.
 
