@@ -1,7 +1,6 @@
 const http = require("http");
 const fm = require('./lib/filemanager');
 const hg = require('./lib/htmlgenerator');
-const qs = require('./lib/querystring');
 
 const host = 'localhost';
 const port = 8000;
