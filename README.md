@@ -50,6 +50,9 @@ Run the following command with your chosen username and password.
 ```bash
 node token.js username password
 ```
+Set Environment Variable with the output hash example of username and password below.
+
+- VOLSER_TOKEN=ff987151403cf7848f70b8910d9fe7ea29642de3aa5d925f73ef2ae7d6ea56c0
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
