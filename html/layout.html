@@ -11,11 +11,20 @@
                 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 font-size: small;
             }
+            form {
+                display: flex;
+                flex-direction: column;
+            }
             table {
                 border-collapse: collapse;
                 font-size: 0.9em;
-                width: 100vw;
                 border: 1px solid #bcbcbc;
+            }
+            .innerTable {
+                margin:4px 0px 5px 10px;
+            }
+            .wide {
+                width:85vw;
             }
             table thead tr {
                 background-color: #bcbcbc;
@@ -26,6 +35,24 @@
             td {
                 padding: 4px;
                 border-bottom: 1px solid #bcbcbc;
+            }
+            .main {
+                display: flex;
+                flex-direction: row;
+            }
+            .menu {
+                background-color: #bcbcbc;
+                font-weight: bold;
+                margin-right: 10px;
+                padding: 5px;
+                width: 10vw;
+                text-align: center;
+            }
+            .content {
+                box-sizing: border-box;
+                display: flex;
+                flex: 1;
+                flex-direction: column;
             }
             .search {
                 float:right;
@@ -44,28 +71,34 @@
                 color: #605f5f;
                 font-weight:bolder;
             }
+
+            .interval {
+                text-transform: capitalize;
+            }
         </style>
     </head>
     <body>
-        <form>
+        <form id="form">
             <div class="search">
-                <span>Search Date</span>
-                <input name="date" id="date" type="date">
-                <input name="interval" type="radio" value="daily" checked> Daily
-                <input name="interval" type="radio" value="monthly"> Monthly
-                <input name="interval" type="radio" value="weekly"> Weekly
-                <input name="interval" type="radio" value="yearly"> Yearly
-                <input name="search" type="text" placeholder="search">
+                [INTERVALS]
+                [SEARCH]
                 <button>Search</button>
+                [SHOWREP] Show Rep Content
             </div>
-            <div class="filter">
-                <h4>[DATE] | Search: [SEARCH]</h4>
+            <div class="main">
+                <div class="menu">
+                    [MENU]
+                </div>
+                <div class="content">
+                    [CONTENT]
+                    [REP]
+                </div>
             </div>
-
-            [CONTENT]
         </form>
     </body>
     <script>
-        document.getElementById('date').value = new Date();
+        const onChange = () => {
+            document.getElementById("form").submit();
+        }
     </script>
 </html>
