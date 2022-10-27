@@ -36,9 +36,19 @@ Environment variables:
 
 - VOLSER_LOCATION will be used as the directory. If this is not set the default will be ./reports.
 - VOLSER_TIMEZONE will be used as the timezone to determine the directory layout. The default is en-ZA which translates to yyyy.MM.dd 
-
+- VOLSER_TOKEN is a required hash generated with token.js. Please see section Token.
+- VOLSER_TOKEN_EXPIRE_MIN is minutes till token expire, default is 10 minutes.
 ```bash
 node index.js
+```
+
+## Generate Token
+
+You will require to generate and store the token as an envrironment variable for authorization.
+
+Run the following command with your chosen username and password.
+```bash
+node token.js username password
 ```
 
 ## License

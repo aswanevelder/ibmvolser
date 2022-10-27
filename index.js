@@ -1,17 +1,13 @@
 const http = require("http");
 const fm = require('./lib/filemanager');
 const hg = require('./lib/htmlgenerator');
+const auth = require(`./lib/auth`);
 
 const host = 'localhost';
 const port = 8000;
 
 const requestListener = async (req, res) => {
-    res.setHeader("Content-Type", "text/html");
-    res.writeHead(200);
-
-    let directory = process.env.VOLSER_LOCATION;
-    if (!directory)
-        directory = `./reports`;
+    await auth.authorize(req, res);
 
     let html = String(await fm.getHtmlLayout());
     html = hg.getHtmlInterval(html, req);
@@ -20,7 +16,6 @@ const requestListener = async (req, res) => {
     html = await fm.search(html, req, menu.date);
     html = await hg.repFile(html, req, menu.date);
     html = hg.search(html, req);
-    
     res.end(html);
 };
 
